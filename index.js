@@ -1,5 +1,5 @@
 // document.querySelector("h1").textContent="Pres Any Key To Start";
-$("h1").text("Press Any Key To Start");
+$("h1").text("Press Any Key Or Click Here To Start");
 
 var Buttons=["blue","red","green","yellow"];
 var compPlayedBtns = [];
@@ -27,7 +27,7 @@ $(document).keypress(function(){
 }
 });
 
-$("body").click(function(){
+$("h1").click(function(){
     if(!started){
         level++;
     $("h1").text("Level " + level);
@@ -94,6 +94,6 @@ function startOver(){
     level=0;
     compPlayedBtns=[];
     userPlayedBtns=[];
-    $("h1").text("Game Over, Press Any Key To Start");
+    $("h1").text("Game Over, Press Any Key Or Click Here To Start");
     started=false;
 }
