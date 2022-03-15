@@ -27,6 +27,16 @@ $(document).keypress(function(){
 }
 });
 
+$("body").click(function(){
+    if(!started){
+        level++;
+    $("h1").text("Level " + level);
+    started=true;
+    // console.log(level);
+    setTimeout(()=>{nextSequence(level)},500); 
+}
+});
+
 // for(let i =0; i<Buttons.length;i++){
 //     document.querySelectorAll("button")[i].addEventListener("click",(event)=>{
 //         userPlayedBtns.push(event.path[0].id);
